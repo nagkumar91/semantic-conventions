@@ -25,7 +25,7 @@ These semantic conventions define:
 - An event that captures individual security findings emitted during that evaluation.
 
 For implementation guidance, examples, and design rationale, see the
-[non-normative implementation guide](non-normative/security_implementation_gen_ai_spec.md).
+[non-normative implementation guide](non-normative/security-implementation-gen-ai-spec.md).
 
 ## Spans
 
