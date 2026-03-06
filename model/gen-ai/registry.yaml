@@ -420,7 +420,7 @@ groups:
               stability: development
             - id: delete_memory
               value: "delete_memory"
-              brief: 'Delete memory items (by id, or by scope+namespace)'
+              brief: 'Delete memory items'
               stability: development
             - id: create_memory_store
               value: "create_memory_store"
@@ -681,7 +681,6 @@ groups:
         stability: development
         examples: ["analyze-code"]
 
-      # Memory Store Identification
       - id: gen_ai.memory.store.id
         stability: development
         type: string
@@ -694,14 +693,12 @@ groups:
         brief: Human-readable name of the memory store.
         examples: ["Customer Support Memory", "Shopping Preferences"]
 
-      # Memory Record Identification
       - id: gen_ai.memory.record.id
         stability: development
         type: string
         brief: The unique identifier of a memory record.
         examples: ["mem_5j66UpCpwteGg4YSxUnt7lPY"]
 
-      # Memory Type (free-form string to accommodate framework differences)
       - id: gen_ai.memory.type
         stability: development
         type: string
@@ -711,7 +708,6 @@ groups:
           Instrumentations SHOULD use low-cardinality values and document any custom values they emit.
         examples: ["short_term", "long_term"]
 
-      # Memory Scope (enum - primarily defined at store creation time)
       - id: gen_ai.memory.scope
         stability: development
         type:
@@ -738,7 +734,6 @@ groups:
           Scopes determine who can access the memory.
         examples: ["user", "conversation", "agent"]
 
-      # Memory Record Content (Opt-In due to sensitivity)
       - id: gen_ai.memory.record.content
         stability: development
         type: any
@@ -751,7 +746,6 @@ groups:
         examples:
           - '{"preference": "dark_mode", "value": true}'
 
-      # Memory Query (Opt-In due to sensitivity)
       - id: gen_ai.memory.query.text
         stability: development
         type: string
@@ -761,7 +755,6 @@ groups:
           > This attribute may contain sensitive information.
         examples: ["user dietary preferences", "past flight bookings"]
 
-      # Search Results
       - id: gen_ai.memory.search.result.count
         stability: development
         type: int
@@ -774,7 +767,6 @@ groups:
         brief: Minimum similarity score threshold used for memory search.
         examples: [0.7, 0.85]
 
-      # Memory Metadata
       - id: gen_ai.memory.expiration_date
         stability: development
         type: string
